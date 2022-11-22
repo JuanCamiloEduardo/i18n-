@@ -17,7 +17,20 @@ const Job = (props) => {
           weekday='long'
         />
       </td>
-      <td>{props.offer.views}</td>
+      <td>
+        <FormattedNumber
+          value={new Number(props.offer.views)}
+          locale="en-US"
+          maximumFractionDigits={3}
+          minimumFractionDigits={0}
+          minimumIntegerDigits={1}
+          notation="standard"
+          numberingSystem="latn"
+          signDisplay="auto"
+          style="decimal"
+          useGrouping="always"          
+        />
+      </td>
     </tr>
   );
 };
